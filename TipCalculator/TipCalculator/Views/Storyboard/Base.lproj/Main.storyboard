@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux4-7T-OX2" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="426" width="207" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="15%"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs3-le-VN4" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="352.5" width="207" height="53.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="10%"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1G-kF-9Ak" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="500" width="207" height="53.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="20%"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMV-tG-y2j" customClass="calcTextField" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="60" y="221" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35R-we-yt0" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="653.5" width="207" height="54"/>
+                                <state key="normal" title="Calculate Tip"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYt-uC-oKF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncH-Z1-8ZL">
+                                <rect key="frame" x="0.0" y="727.5" width="414" height="134.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="35R-we-yt0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bsc-9l-1fU"/>
+                            <constraint firstItem="X1G-kF-9Ak" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="CIa-0z-2Py"/>
+                            <constraint firstItem="X1G-kF-9Ak" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DsG-ox-Dh4"/>
+                            <constraint firstItem="ncH-Z1-8ZL" firstAttribute="top" secondItem="35R-we-yt0" secondAttribute="bottom" constant="20" id="GJc-XZ-Hfc"/>
+                            <constraint firstItem="ux4-7T-OX2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Gsw-Af-ZuX"/>
+                            <constraint firstItem="FMV-tG-y2j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="HK9-Dx-I4x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ncH-Z1-8ZL" secondAttribute="bottom" id="LQj-pj-eEm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FMV-tG-y2j" secondAttribute="trailing" constant="60" id="LdG-uI-khA"/>
+                            <constraint firstItem="bs3-le-VN4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UMO-0E-pLt"/>
+                            <constraint firstItem="ux4-7T-OX2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UQ4-yL-uxu"/>
+                            <constraint firstItem="35R-we-yt0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="XA7-BR-Ldh"/>
+                            <constraint firstItem="bs3-le-VN4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="ZSv-fX-sf5"/>
+                            <constraint firstItem="X1G-kF-9Ak" firstAttribute="top" secondItem="ux4-7T-OX2" secondAttribute="bottom" constant="20" id="aO9-iB-TsY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ncH-Z1-8ZL" secondAttribute="trailing" id="aRZ-x8-wnF"/>
+                            <constraint firstItem="ux4-7T-OX2" firstAttribute="top" secondItem="bs3-le-VN4" secondAttribute="bottom" constant="20" id="bxR-uo-Mt7"/>
+                            <constraint firstItem="35R-we-yt0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="dUz-ko-wrt"/>
+                            <constraint firstItem="bs3-le-VN4" firstAttribute="top" secondItem="FMV-tG-y2j" secondAttribute="bottom" constant="97.5" id="fZ8-xP-yo5"/>
+                            <constraint firstItem="35R-we-yt0" firstAttribute="top" secondItem="X1G-kF-9Ak" secondAttribute="bottom" constant="100" id="gIY-uk-4mX"/>
+                            <constraint firstItem="X1G-kF-9Ak" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="gPr-WZ-uOt"/>
+                            <constraint firstItem="ux4-7T-OX2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="iv3-Oh-6vx"/>
+                            <constraint firstItem="FMV-tG-y2j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="odl-jv-KKH"/>
+                            <constraint firstItem="ncH-Z1-8ZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uLd-t2-bBK"/>
+                            <constraint firstItem="ux4-7T-OX2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wvu-jv-3XI"/>
+                            <constraint firstItem="bs3-le-VN4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="yHc-Ub-uag"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="ncH-Z1-8ZL" id="s7r-T4-cYo"/>
+                        <outlet property="billAmountTextField" destination="FMV-tG-y2j" id="Gnj-9F-y3d"/>
+                        <outlet property="calculateTipButton" destination="35R-we-yt0" id="ma0-FW-5dE"/>
+                        <outlet property="fifteenPercentButton" destination="ux4-7T-OX2" id="Z83-Q6-iop"/>
+                        <outlet property="tenPercentButton" destination="bs3-le-VN4" id="Wgq-bS-NbD"/>
+                        <outlet property="twentyPercentButton" destination="X1G-kF-9Ak" id="qpq-SM-bKp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
